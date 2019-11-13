@@ -1,0 +1,42 @@
+{% load panels %}
+{% load forms %}
+
+<div class="col-md-12">
+  <div class="panel">
+    <div class="panel-heading bg-coral">
+      <h3 class="text-white">
+        [[ episode.start | displayDate ]]<span ng-show="episode.end"> - [[ episode.end | displayDate ]]</span>
+        <i class="fa fa-plus-circle pull-right pointer"
+           ng-click="add_visible = !add_visible"
+           ></i>
+
+      </h3>
+    </div>
+  </div>
+</div>
+<div class="panel" ng-show="add_visible" id="add-subrecord-panel">
+  <div class="panel-body" >
+    <div class="row">
+      {% for model in records %}
+        <div class="col-md-4">
+          <button class="btn btn-lg col-md-12 add-subrecord"
+                  ng-click="episode.recordEditor.newItem('{{ model.get_api_name }}')"
+                  >
+            {% icon model.get_icon %}
+            {{ model.get_display_name }}
+          </button>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6">
+  {% record_panel models.SymptomComplex only_display_if_exists=True %}
+  {% record_panel models.PastMedicalHistory only_display_if_exists=True %}
+  {% record_panel models.Diagnosis only_display_if_exists=True %}
+  {% record_panel models.Treatment only_display_if_exists=True %}
+</div>
+<div class="col-md-6">
+  {% record_panel models.PatientConsultation only_display_if_exists=True %}
+</div>

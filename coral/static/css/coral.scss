@@ -1,0 +1,371 @@
+$bluegreen: rgba(58, 138, 138, 1);
+$blue: rgba(70, 118, 197, 1);
+$coral: #FF6F61;
+$lightgrey: #ccc;
+$slate: rgb(67, 76, 61);
+$black: rgb(44, 45, 48);
+$red: rgba(208, 28, 23, 1);
+$indigo: #4123BF;
+
+$twocolwidth: 16.6666666667%;
+
+.panel.panel-primary .panel-heading.bg-coral,
+.bg-coral {
+    background: $coral;
+}
+.bg-slate{
+    background: $slate;
+}
+.bg-lightgrey{
+    background: $lightgrey;
+}
+.text-white {
+    color: white;
+}
+
+%nav-bar-heading{
+    position: fixed;
+    top: 0px;
+    z-index: 1001;
+    margin-top: -16px;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    background: transparent;
+}
+
+
+#center-col {
+    margin-left: $twocolwidth;
+}
+.loading {
+    display: none
+}
+@media (min-width: 1200px){
+  .container {
+      // Why doesn't this accept $twocolwidth ?
+      width: calc(1170px - 16.6666666667%);
+  }
+}
+a {
+    transition: none;
+}
+
+#left-col {
+    background: $coral;
+    height: 100%;
+    max-width: 300px;
+}
+.navbar {
+  height: 50px;
+}
+.navbar-fixed-top {
+    left: 230px;
+}
+.top-navbar {
+    border-bottom: 1px solid $lightgrey;
+    left: auto;
+    right: 0px;
+    width: 83.33333333333%;
+    z-index: 1000;
+}
+
+.outer-container {
+    height: initial;
+    min-height: calc(100vh - 64px);
+}
+
+.nav-pills li a {
+    padding-top: 3px;
+    padding-bottom: 2px;
+}
+.nav-pills li i {
+    margin-right: 4px;
+}
+.nav-pills li {
+    height: 26px;
+}
+
+#left-col {
+    // height: 99vh;
+    position: fixed;
+
+}
+#center-col {
+    background: white;
+}
+
+h1 small {
+    color: $slate;
+}
+
+#left-col h1 small {
+  color: white;
+}
+#left-col .nav-pills li.active a {
+    background: $slate;
+    border-radius: 0px;
+    color: white;
+}
+.nav-pills li a:hover{
+    background:    rgb(57, 47, 55)
+}
+#left-col,
+#left-col .nav a{
+    color: white;
+}
+#left-col h1 {
+    margin-left: 18px;
+    font-size: 18px;
+    color: white;
+}
+#left-col h2{
+    margin-left: 18px;
+    font-size: 16px;
+}
+#left-col h2 i{
+    font-size: 12px;
+    color:  white;
+    margin-right: 2px;
+}
+
+#left-col h3 {
+  font-size: 14px;
+  margin-left: 18px;
+}
+
+.ngProgressLiteBar {
+    display: none;
+}
+
+.panel {
+  border: none;
+  background: none;
+  box-shadow: none;
+  border-radius: 0px;
+}
+.panel-default .panel-body{
+  background: white;
+}
+.panel-default .panel-heading{
+  padding-left: 0px;
+}
+
+.panel.panel-primary .panel-heading {
+    background: white;
+    color: $slate;
+    padding-left: 20px;
+    border-bottom: none;
+}
+
+.panel.panel-default.record-panel .panel-heading {
+  background: white;
+  border: none;
+  color: $black;
+  border-bottom: 1px solid $bluegreen;
+  padding-left: 20px
+}
+.panel-footer {
+  background: none;
+  border: none;
+}
+
+.btn{
+    box-shadow: none;
+    border-color: $lightgrey;
+    // border: none;
+    border-radius: .25rem;
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+// date picker btns
+.dropdown-menu .btn{
+    padding: 5px 10px;
+}
+
+.btn.btn-primary {
+    background: $coral;
+    border: none;
+}
+.btn.btn-secondary {
+    background: white;
+    color: $black;
+    border: 1px solid $lightgrey;
+}
+
+.btn-cancel{
+    margin-right: 20px;
+    border: 1px solid $lightgrey;
+}
+
+
+.panel.login{
+    border: 1px solid #ccc;
+    padding: 12px;
+    width: 200%;
+    margin-left: -160px;
+    background: white;
+
+    table{
+        width: 100%;
+        th{
+            display: none;
+        }
+    }
+
+    .panel-heading{
+        background: white;
+        position: relative;
+
+        h1{
+            text-align: center;
+            font-weight: bold;
+            color: $black;
+        }
+
+        img{
+            position: absolute;
+            right: 0px;
+            bottom: 10px;
+        }
+    }
+
+    .panel-body img{
+        float: none;
+        height: initial;
+        width: 100%;
+    }
+
+    .btn.btn-primary {
+        width: 100%;
+        font-size: 18px;
+    }
+
+    input[type=text], input[type=password], input[type=number]  {
+        font-size: 20px;
+        line-height: 34px;
+        height: 56px;
+        margin-bottom: 20px;
+        border-radius: 4px;
+        box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+        border: 1px solid rgb(204, 204, 204);
+        padding: 12px 6px;
+        width: 100%;
+    }
+}
+
+
+.edit {
+  color: $lightgrey;
+}
+.no-touchevents .panel-heading i.edit, .list-group-item i.edit, .list-group-item i.delete {
+  display: block;
+}
+.modal-header{
+    background: $coral;
+}
+.panel.panel-primary .panel-heading.patient-detail-heading,
+.patient-detail-heading {
+    @extend %nav-bar-heading;
+}
+
+.panel.panel-primary .panel-heading.pathway-header{
+    @extend %nav-bar-heading;
+}
+
+.panel-header-padding{
+    // mirrors the panel header padding
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.legacy_content p br  {
+    content: "A" !important;
+    display: block !important;
+    margin-bottom: 0.6em !important;
+    margin-top: 6px;
+}
+
+
+.peak-flow-grid {
+    margin-left: 24px;
+}
+
+.peak-flow-grid input {
+    width: 80%;
+}
+
+
+.c3-region.workingday {
+    fill: $blue;
+}
+
+.c3-dashed-line {
+    stroke-dasharray: 3, 3;
+}
+
+
+.bottom-menu{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    bottom: 30px;
+    display: block;
+    padding-top: 10px;
+
+    hr{
+        margin-left: 10px;
+        margin-right: 10px;
+        border-top: 2px solid white;
+        display: block;
+    }
+}
+
+.horizontal-form{
+    padding-left: 20px;
+    padding-right: 20px;
+
+    .checkbox{
+        margin-top: 32px;
+    }
+}
+
+.form-row{
+    height: 59px;
+}
+
+// hides the html5 datepicker
+input::-webkit-calendar-picker-indicator{
+    display: none;
+}
+input[type="date"]::-webkit-input-placeholder{
+    visibility: hidden !important;
+}
+
+// fixes up/down arrows on select2
+.ui-select-choices-row.active{
+    background-color: #f5f5f5;
+}
+.ui-select-match-text {
+    font-size: 18px;
+    margin-top: -9px;
+}
+.ui-select-choices-row-inner{
+    font-size: 18px;
+}
+
+.btn.add-subrecord{
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+#add-subrecord-panel {
+    border-bottom: 1px solid $slate;
+}
+
+.btn.btn-primary.new-episode-button{
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin-top: -30px;
+    margin-left: 20px;
+}

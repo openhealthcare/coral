@@ -1,0 +1,3 @@
+recursive-include coral/static *
+recursive-include coral/assets *
+recursive-include coral/templates *

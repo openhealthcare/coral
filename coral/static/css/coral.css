@@ -1,0 +1,286 @@
+.panel.panel-primary .panel-heading.bg-coral,
+.bg-coral {
+  background: #FF6F61; }
+
+.bg-slate {
+  background: #434c3d; }
+
+.bg-lightgrey {
+  background: #ccc; }
+
+.text-white {
+  color: white; }
+
+.panel.panel-primary .panel-heading.patient-detail-heading,
+.patient-detail-heading, .panel.panel-primary .panel-heading.pathway-header {
+  position: fixed;
+  top: 0px;
+  z-index: 1001;
+  margin-top: -16px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background: transparent; }
+
+#center-col {
+  margin-left: 16.6666666667%; }
+
+.loading {
+  display: none; }
+
+@media (min-width: 1200px) {
+  .container {
+    width: calc(1170px - 16.6666666667%); } }
+a {
+  transition: none; }
+
+#left-col {
+  background: #FF6F61;
+  height: 100%;
+  max-width: 300px; }
+
+.navbar {
+  height: 50px; }
+
+.navbar-fixed-top {
+  left: 230px; }
+
+.top-navbar {
+  border-bottom: 1px solid #ccc;
+  left: auto;
+  right: 0px;
+  width: 83.33333333333%;
+  z-index: 1000; }
+
+.outer-container {
+  height: initial;
+  min-height: calc(100vh - 64px); }
+
+.nav-pills li a {
+  padding-top: 3px;
+  padding-bottom: 2px; }
+
+.nav-pills li i {
+  margin-right: 4px; }
+
+.nav-pills li {
+  height: 26px; }
+
+#left-col {
+  position: fixed; }
+
+#center-col {
+  background: white; }
+
+h1 small {
+  color: #434c3d; }
+
+#left-col h1 small {
+  color: white; }
+
+#left-col .nav-pills li.active a {
+  background: #434c3d;
+  border-radius: 0px;
+  color: white; }
+
+.nav-pills li a:hover {
+  background: #392f37; }
+
+#left-col,
+#left-col .nav a {
+  color: white; }
+
+#left-col h1 {
+  margin-left: 18px;
+  font-size: 18px;
+  color: white; }
+
+#left-col h2 {
+  margin-left: 18px;
+  font-size: 16px; }
+
+#left-col h2 i {
+  font-size: 12px;
+  color: white;
+  margin-right: 2px; }
+
+#left-col h3 {
+  font-size: 14px;
+  margin-left: 18px; }
+
+.ngProgressLiteBar {
+  display: none; }
+
+.panel {
+  border: none;
+  background: none;
+  box-shadow: none;
+  border-radius: 0px; }
+
+.panel-default .panel-body {
+  background: white; }
+
+.panel-default .panel-heading {
+  padding-left: 0px; }
+
+.panel.panel-primary .panel-heading {
+  background: white;
+  color: #434c3d;
+  padding-left: 20px;
+  border-bottom: none; }
+
+.panel.panel-default.record-panel .panel-heading {
+  background: white;
+  border: none;
+  color: #2c2d30;
+  border-bottom: 1px solid #3a8a8a;
+  padding-left: 20px; }
+
+.panel-footer {
+  background: none;
+  border: none; }
+
+.btn {
+  box-shadow: none;
+  border-color: #ccc;
+  border-radius: .25rem;
+  padding-top: 18px;
+  padding-bottom: 18px; }
+
+.dropdown-menu .btn {
+  padding: 5px 10px; }
+
+.btn.btn-primary {
+  background: #FF6F61;
+  border: none; }
+
+.btn.btn-secondary {
+  background: white;
+  color: #2c2d30;
+  border: 1px solid #ccc; }
+
+.btn-cancel {
+  margin-right: 20px;
+  border: 1px solid #ccc; }
+
+.panel.login {
+  border: 1px solid #ccc;
+  padding: 12px;
+  width: 200%;
+  margin-left: -160px;
+  background: white; }
+  .panel.login table {
+    width: 100%; }
+    .panel.login table th {
+      display: none; }
+  .panel.login .panel-heading {
+    background: white;
+    position: relative; }
+    .panel.login .panel-heading h1 {
+      text-align: center;
+      font-weight: bold;
+      color: #2c2d30; }
+    .panel.login .panel-heading img {
+      position: absolute;
+      right: 0px;
+      bottom: 10px; }
+  .panel.login .panel-body img {
+    float: none;
+    height: initial;
+    width: 100%; }
+  .panel.login .btn.btn-primary {
+    width: 100%;
+    font-size: 18px; }
+  .panel.login input[type=text], .panel.login input[type=password], .panel.login input[type=number] {
+    font-size: 20px;
+    line-height: 34px;
+    height: 56px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+    border: 1px solid #cccccc;
+    padding: 12px 6px;
+    width: 100%; }
+
+.edit {
+  color: #ccc; }
+
+.no-touchevents .panel-heading i.edit, .list-group-item i.edit, .list-group-item i.delete {
+  display: block; }
+
+.modal-header {
+  background: #FF6F61; }
+
+.panel-header-padding {
+  padding-left: 20px;
+  padding-right: 20px; }
+
+.legacy_content p br {
+  content: "A" !important;
+  display: block !important;
+  margin-bottom: 0.6em !important;
+  margin-top: 6px; }
+
+.peak-flow-grid {
+  margin-left: 24px; }
+
+.peak-flow-grid input {
+  width: 80%; }
+
+.c3-region.workingday {
+  fill: #4676c5; }
+
+.c3-dashed-line {
+  stroke-dasharray: 3, 3; }
+
+.bottom-menu {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+  bottom: 30px;
+  display: block;
+  padding-top: 10px; }
+  .bottom-menu hr {
+    margin-left: 10px;
+    margin-right: 10px;
+    border-top: 2px solid white;
+    display: block; }
+
+.horizontal-form {
+  padding-left: 20px;
+  padding-right: 20px; }
+  .horizontal-form .checkbox {
+    margin-top: 32px; }
+
+.form-row {
+  height: 59px; }
+
+input::-webkit-calendar-picker-indicator {
+  display: none; }
+
+input[type="date"]::-webkit-input-placeholder {
+  visibility: hidden !important; }
+
+.ui-select-choices-row.active {
+  background-color: #f5f5f5; }
+
+.ui-select-match-text {
+  font-size: 18px;
+  margin-top: -9px; }
+
+.ui-select-choices-row-inner {
+  font-size: 18px; }
+
+.btn.add-subrecord {
+  text-align: left;
+  margin-bottom: 12px; }
+
+#add-subrecord-panel {
+  border-bottom: 1px solid #434c3d; }
+
+.btn.btn-primary.new-episode-button {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-top: -30px;
+  margin-left: 20px; }
+
+/*# sourceMappingURL=coral.css.map */

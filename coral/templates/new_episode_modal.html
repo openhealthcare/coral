@@ -1,0 +1,25 @@
+{% extends 'base_templates/modal_base.html' %}
+
+{% block icon %}
+
+{% endblock %}
+{% block title %}
+  Add Episode
+{% endblock %}
+
+{% block modal_body %}
+  <h3>
+    This will create a new episode for this patient - are you sure?
+  </h3>
+
+  <form method="POST" action="{% url 'create-new-episode' %}">
+    {% csrf_token %}
+    <input type="hidden" name="patient_id" value="[[ patient_id ]]">
+    <input type="submit" class="btn btn-primary" value="Create Episode">
+  </form>
+
+
+{% endblock %}
+{% block modal_save %}
+
+{% endblock %}

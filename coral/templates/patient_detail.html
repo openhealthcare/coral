@@ -1,0 +1,73 @@
+{% extends 'patient_detail_base.html' %}
+{% load panels %}
+
+{% block heading %}
+  [[ patient.demographics[0].first_name ]] [[ patient.demographics[0].surname ]]
+
+{% endblock %}
+
+{% block content %}
+  <button class="btn btn-primary new-episode-button"
+          ng-click="open_modal('NewEpisodeModalCtrl', '/templates/new_episode_modal.html', {patient_id: patient.id})">
+    <i class="fa fa-plus-circle"></i>
+    New Episode
+  </button>
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading">
+      <h3>
+        <i class="fa fa-user"></i> Demographics
+        <i class="fa fa-pencil edit pull-right"
+           ng-click="patient.recordEditor.editItem('demographics', patient.demographics[0])"></i>
+      </h3>
+    </div>
+    <div class="panel-body">
+      <div class="row">
+        <div class="col-md-2">
+          <b>Name</b>
+        </div>
+        <div class="col-md-4">
+          [[ patient.demographics[0].first_name ]]
+          [[ patient.demographics[0].surname ]]
+        </div>
+        <div class="col-md-2">
+          <b>DOB</b>
+        </div>
+        <div class="col-md-4">
+          [[ patient.demographics[0].date_of_birth | displayDate ]]
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-2">
+          <b>Hosp. #</b>
+        </div>
+        <div class="col-md-4">
+          [[ patient.demographics[0].hospital_number ]]
+        </div>
+        <div class="col-md-2">
+          <b>Sex</b>
+        </div>
+        <div class="col-md-4">
+          [[ patient.demographics[0].sex ]]
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% record_panel models.Allergies only_display_if_exists=True %}
+
+  <div class="col-md-12" ng-repeat="episode in patient.episodes">
+    {% comment %}
+      It's a little silly to have to iterate through these knowing there's only one,
+      but for the sake of not rewriting the view, let's for now.
+    {% endcomment %}
+    {% for episode_category in episode_categories %}
+      {% ifequal episode_category.display_name "Episode" %}
+        <div class="row" ng-show="episode.category_name == '{{ episode_category.display_name }}'">
+          {% include episode_category.detail_template %}
+        </div>
+      {% endifequal %}
+    {% endfor %}
+  </div>
+{% endblock %}
