@@ -1,0 +1,26 @@
+{% extends 'opal.html' %}
+
+{% block ngapp %}{% endblock %}
+{% block loading %}{% endblock %}
+{% block viewport %}
+  <div class="row content-offset content-offset-below">
+    <div class="col-md-12">
+      <h1>Create New Bill for {{ view.patient.demographics.name }}</h1>
+      <form method="POST" action=".">{% csrf_token %}
+        <div class="row">
+          {% for item in billing_items %}
+
+          <div class="checkbox col-md-3 form-group">
+            <input type="checkbox" name="{{ item.name|slugify }}" id="{{ item.name|slugify }}">
+            <label for="{{ item.name|slugify }}">
+              {{ item.price }} {{ item.name }}
+            </label>
+          </div>
+
+        {% endfor %}
+        </div>
+        <input type="submit" value="Save" class="btn btn-primary btn-lg" />
+      </form>
+    </div>
+  </div>
+{% endblock %}

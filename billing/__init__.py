@@ -1,0 +1,3 @@
+"""
+Coral Billing app
+"""

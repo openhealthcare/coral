@@ -1,0 +1,3 @@
+"""
+Make commands a module
+"""

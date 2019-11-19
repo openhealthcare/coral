@@ -1,0 +1,35 @@
+{% extends 'opal.html' %}
+{% load humanize %}
+{% block ngapp %}{% endblock %}
+{% block loading %}{% endblock %}
+{% block viewport %}
+  <div class="row content-offset content-offset-below">
+    <div class="col-md-12">
+      <h1>Billing History for {{ view.patient.demographics.name }}</h1>
+    </div>
+
+      {% for bill in object_list %}
+        <div class="col-md-12">
+          <h2>
+            {% if bill.paid %}
+              Paid
+            {% else %}
+              Unpaid
+            {% endif %}
+            {{ bill.value | intcomma }}
+            {% if not bill.paid %}
+            <form class="pull-right" method="POST"
+                  action="{% url 'bill-paid' bill_id=bill.id %}">{% csrf_token %}
+              <input type="submit" value="Mark Paid" class="btn btn-primary" />
+            </form>
+            {% endif %}
+          </h2>
+          <ul>
+            {% for item in bill.items.all %}
+              <li>{{ item.price }} {{ item.name }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endfor %}
+  </div>
+{% endblock %}

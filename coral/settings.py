@@ -19,13 +19,14 @@ ALLOWED_HOSTS = [
     'localhost',
     '127.0.0.1',
     '.herokuapp.com',
-    '10.0.0.72'
+    '10.0.0.126'
 ]
 
 INSTALLED_APPS = [
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
+    'django.contrib.humanize',
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.staticfiles',
@@ -39,6 +40,7 @@ INSTALLED_APPS = [
     'opal.core.search',
     'opal.core.pathway',
     'opal.core.referencedata',
+    'billing',
     'coral',
 
     'django.contrib.admin',
